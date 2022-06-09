@@ -1,4 +1,4 @@
-from falling_objects import FallingObject
+from falling_object import FallingObject
 
 class Gem(FallingObject):
     def __init__(self):

@@ -1,4 +1,4 @@
-from falling_objects import FallingObject
+from falling_object import FallingObject
 
 class Mine(FallingObject):
     def __init__(self):

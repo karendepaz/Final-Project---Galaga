@@ -1,6 +1,5 @@
 from pyray import *
 import random
-from falling_objects import FallingObject
 from player import Player
 from score import Score
 from gem import Gem
@@ -53,6 +52,3 @@ class Game:
                     self.score.value += object.points
             if object.position.y == 590:
                 self.falling_objects.remove(object)
-
-game = Game()
-game.start_game()

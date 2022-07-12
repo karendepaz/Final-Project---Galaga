@@ -1,4 +1,4 @@
-# Galage
+# Galaga
 This is a program that facilitates a game of "Galaga"
 
 Galaga is played according to the following rules:

@@ -1,54 +1,56 @@
 from pyray import *
-import random
+from point import Point
 from player import Player
 from score import Score
-from gem import Gem
-from rock import Rock
-from mine import Mine
+from life_counter import LifeCounter
+from enemy_one import EnemyOne
 
 class Game:
 
     def __init__(self):
 
-        self.player = Player()
-        self.falling_objects = []
-        self.score = Score()
-        self.add_object_counter = 0
+        self._player = Player()
+        self._score = Score()
+        self._life_counter = LifeCounter()
+        self._enemies = []
 
     def start_game(self):
 
-        init_window(900, 600, "Greed")
+        # Open the game window.
+        init_window(900, 600, "Galaga")
 
+        # Create enemies.
+        self.generate_enemies()
+
+        # Begin game loop.
         while not window_should_close():
             begin_drawing()
             clear_background(BLACK)
-            self.check_object_removal()
-            if self.add_object_counter > 500:
-                picker = random.randint(1, 100)
-                if picker in range(0, 6):
-                    object = Mine()
-                elif picker in range(6, 61):
-                    object = Rock()
-                elif picker in range(61, 101):
-                    object = Gem()
-                self.falling_objects.append(object)
-                self.add_object_counter = 0
-            else:
-                self.add_object_counter += 1
-            self.score.display_score()
-            for object in self.falling_objects:
-                object.fall()
-                draw_text(object.appearance, object.position.x, object.position.y, 15, RED)
-            self.player.move()
-            draw_text(self.player.appearance, self.player.position.x, self.player.position.y, 15, WHITE)
+            self._score.display_score()
+            self._life_counter.display_life_counter()
+            self._player.display_player()
+            for enemy in self._enemies:
+                enemy.display_enemy()
+                enemy.random_fire()
+                enemy.advance_bullets()
+                enemy.random_dive()
+                enemy.advance_enemy()
+            self._player.move()
+            self._player.fire()
+            self._player.advance_bullets()
             end_drawing()
         close_window()
 
-    def check_object_removal(self):
-        for object in self.falling_objects:
-            if object.position.x in range(self.player.position.x - 8, self.player.position.x + 8):
-                if object.position.y in range(self.player.position.y - 8, self.player.position.y + 8):
-                    self.falling_objects.remove(object)
-                    self.score.value += object.points
-            if object.position.y == 590:
-                self.falling_objects.remove(object)
+    def generate_enemies(self):
+
+        # Generate "O" enemy row.
+        positions = [Point(120, 100), Point(160, 100), Point(200, 100), Point(240, 100), Point(280, 100), Point(320, 100),
+            Point(360, 100), Point(400, 100), Point(440, 100), Point(480, 100), Point(520, 100), Point(560, 100),
+            Point(600, 100), Point(640, 100), Point(680, 100), Point(720, 100), Point(760, 100)]
+        for position in positions:
+            enemy = EnemyOne()
+            enemy.set_position(position)
+            self._enemies.append(enemy)
+
+    def check_object_collision(self):
+        pass

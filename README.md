@@ -1,19 +1,12 @@
-# Greed
-This is a program that facilitates a game of "Greed"
+# Galage
+This is a program that facilitates a game of "Galaga"
 
-Greed is played according to the following rules:
+Galaga is played according to the following rules:
 
-    - Gems (*), rocks (o), and mines (x) randomly appear and fall from the top of the screen.
-    - The player (#) can move left or right along the bottom of the screen.
-    - If the player touches a gem they earn a point.
-    - If the player touches a rock they lose a point.
-    - If the player touches a mine they lose 20 points.
-    - Gems and rocks are removed when the player touches them.
-    - The game continues until the player closes the window.
+    - The Player must shoot the enemy ships above them
+    - If the Player is hit by a ship or an enemy bullet,
+      they lose a life
+    - If the player loses 3 lives, they lose the game
+    - Some enemies take 2 shots to be detroyed
 
-The program must meet the following specifications:
-
-    - The program must have a README file.
-    - The program must have at least eight classes.
-    - Each module, class and method must have a corresponding comment.
-    - The game must remain generally true to the order of play described earlier.
+Open and run the "__main__.py file to begin the game

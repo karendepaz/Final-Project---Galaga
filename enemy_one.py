@@ -5,6 +5,15 @@ from enemy import Enemy
 from enemy_bullet import EnemyBullet
 
 class EnemyOne(Enemy):
+    """
+    The EnemyOne class inherits from the Enemy class. This class takes care of the "O" enemy, its action and attributes.
+
+    Attributes:
+        inherits from Enemy class
+        appearance
+        score
+        hit_points
+    """
 
     def __init__(self):
         super().__init__()

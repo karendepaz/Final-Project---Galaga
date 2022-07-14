@@ -2,6 +2,12 @@ from bullet import Bullet
 from pyray import *
 
 class PlayerBullet(Bullet):
+    """
+    The PlayerBullet inherits from the bullet class. This class takes care of the players bullet action and attribures.
+    
+    Attributes:
+        inherits from Bullet class
+    """
 
     def __init__(self):
         super().__init__()

@@ -10,3 +10,5 @@ Galaga is played according to the following rules:
     - Some enemies take 2 shots to be detroyed
 
 Open and run the "__main__.py file to begin the game
+
+Use "<" and ">" to move. Use the space bar to shoot.

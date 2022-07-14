@@ -81,3 +81,27 @@ class Player:
                 else:
                     bullet.advance()
                     bullet.display_bullet()
+    
+    def get_bullet(self):
+        return self._bullets
+
+    def get_hit_points(self):
+        return self._hit_points
+
+    def subtract_hit_points(self):
+        self._hit_points -= 1
+
+    def remove_bullet(self, bullet):
+        self._bullets.remove(bullet)
+
+    def get_position(self):
+        return self._position
+    
+    def reset_position(self):
+        self._position = Point(450, 550)
+    
+    def reset_hit_points(self):
+        self._hit_points = 1
+
+    def game_over(self):
+        self._appearance = "GAME OVER"

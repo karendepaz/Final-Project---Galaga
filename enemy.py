@@ -48,3 +48,15 @@ class Enemy:
 
     def random_dive(self):
         pass
+
+    def get_hit_points(self):
+        return self._hit_points
+    
+    def subtract_hit_points(self):
+        self._hit_points -= 1
+    
+    def get_bullets(self):
+        return self._bullets
+    
+    def remove_bullet(self, bullet):
+        self._bullets.remove(bullet)

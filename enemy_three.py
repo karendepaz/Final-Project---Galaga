@@ -16,7 +16,7 @@ class EnemyThree(Enemy):
         draw_text(self._appearance, self._position.get_x(), self._position.get_y(), 20, RED)
 
     def random_fire(self):
-        maybe_fire = random.randint(1, 1000000)
+        maybe_fire = random.randint(1, 150000)
 
         if maybe_fire == 500:
             bullet = EnemyBullet()

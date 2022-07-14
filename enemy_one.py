@@ -19,7 +19,7 @@ class EnemyOne(Enemy):
             draw_text(self._appearance, self._position.get_x(), self._position.get_y(), 20, YELLOW)
 
     def random_fire(self):
-        maybe_fire = random.randint(1, 150000)
+        maybe_fire = random.randint(1, 100000)
 
         if maybe_fire == 500:
             bullet = EnemyBullet()

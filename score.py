@@ -10,3 +10,6 @@ class Score:
 
     def set_score(self, points):
         self._value += points
+    
+    def get_score(self):
+        return self._value

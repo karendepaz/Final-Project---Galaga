@@ -8,6 +8,15 @@ from enemy_two import EnemyTwo
 from enemy_three import EnemyThree
 
 class Game:
+    """
+    The Game class takes care of the running game loop, generates enemies, and collision. 
+
+    Attributes:
+        player
+        score
+        life_counter
+        enemies
+    """
 
     def __init__(self):
 

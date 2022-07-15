@@ -1,4 +1,11 @@
 class Point:
+    """
+    The Point class takes care of the objects. A distance from a relative origin (0, 0)
+    
+    Attributes:
+        x
+        y
+    """
 
     def __init__(self, x, y):
         self._x = x

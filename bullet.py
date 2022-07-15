@@ -2,15 +2,6 @@ from pyray import *
 from point import Point
 
 class Bullet:
-    """
-    The Bullet class takes care of the bullets action and attributes. 
-
-    Atrributes:
-        appearance
-        position
-        advance_counter
-        hit_points
-    """
 
     def __init__(self):
         self._appearance = "|"

@@ -3,17 +3,6 @@ from point import Point
 from player_bullet import PlayerBullet
 
 class Player:
-    """
-    The Player class takes care of the players actions and attributes.
-
-    Attributes:
-        appearance
-        position
-        hit_points
-        move_counter
-        fire_counter
-        bullets
-    """
 
     def __init__(self):
         self._appearance = "A"

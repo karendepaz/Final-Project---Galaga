@@ -1,12 +1,6 @@
 from pyray import *
 
 class Score:
-    """
-    The Score class takes care of players score. 
-
-    Attributes:
-        value
-    """
 
     def __init__(self):
         self._value = 0

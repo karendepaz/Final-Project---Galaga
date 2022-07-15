@@ -2,12 +2,6 @@ from bullet import Bullet
 from pyray import *
 
 class EnemyBullet(Bullet):
-    """
-    The EnemyBullet inherits from the bullet class. This class takes care of the enemies bullet action and attribures.
-    
-    Attributes:
-        inherits from Bullet class
-    """
 
     def __init__(self):
         super().__init__()

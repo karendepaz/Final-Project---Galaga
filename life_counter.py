@@ -1,7 +1,13 @@
 from pyray import *
 
 class LifeCounter:
+    """
+    The LifeCounter class keeps track of the players lives.
 
+    Attribures:
+        value
+    """
+    
     def __init__(self):
         self._value = 3
 

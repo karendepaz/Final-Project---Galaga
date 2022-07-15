@@ -4,7 +4,19 @@ from point import Point
 from bullet import Bullet
 
 class Enemy:
+    """
+    The enemy class takes care of the enemies action and attributes. 
 
+    Attributes:
+        appearance
+        position
+        score
+        dive
+        move_counter
+        hit_points
+        bullets
+    """
+    
     def __init__(self):
         self._appearance = ""
         self._position = Point(0, 0)
